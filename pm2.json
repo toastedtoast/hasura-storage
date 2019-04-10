@@ -1,5 +1,5 @@
 {
   "script": "./src/index.js",
-  "name": "backend-hasura-plus",
+  "name": "hasura-storage",
   "watch": true,
 }

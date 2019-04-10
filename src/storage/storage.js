@@ -1,5 +1,4 @@
 const express = require('express');
-const Joi = require('joi');
 const Boom = require('boom');
 const jwt = require('jsonwebtoken');
 const uuidv4 = require('uuid/v4');
@@ -35,7 +34,6 @@ router.get('/file/*', (req, res, next) => {
   const jwt_token = req.cookies.jwt_token;
 
   let claims;
-
   if (jwt_token) {
     // check jwt token if it exists
     try {
@@ -97,6 +95,7 @@ const upload = multer({
   storage: multerS3({
     s3: s3,
     bucket: S3_BUCKET,
+    acl: 'public-read-write',
     metadata: (req, file, cb) => {
       cb(null, {
         originalname: file.originalname,

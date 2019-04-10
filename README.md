@@ -131,4 +131,4 @@ module.exports = {
 };
 ```
 
-You can see other examples [here](examples) in examples folder.
+You can see other examples [here](examples) in examples folder. This example is still based on the original repository.

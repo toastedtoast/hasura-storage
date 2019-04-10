@@ -3,7 +3,6 @@ const cors = require('cors');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 
-const auth = require('./auth/auth');
 const storage = require('./storage/storage');
 
 const app = express();
@@ -19,7 +18,6 @@ app.use(cookieParser());
 app.disable('x-powered-by');
 
 // routes
-app.use('/auth', auth);
 app.use('/storage', storage);
 
 // error handler
