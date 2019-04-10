@@ -1,13 +1,14 @@
-FROM keymetrics/pm2:10-alpine
+FROM node:alpine
 
 WORKDIR /app
 
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
 COPY package*.json ./
 RUN npm install
 
-COPY pm2.json .
-COPY src src
+COPY . .
 
-ADD . .
-
-CMD ["pm2-runtime", "start", "pm2.json"]
+EXPOSE 3010
+CMD ["npm", "start"]
