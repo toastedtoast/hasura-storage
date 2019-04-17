@@ -1,5 +1,5 @@
 
-<h1 align="center">Hasura Storage</h1>
+<h1 align="center">[WIP] Hasura Storage</h1>
 <h4 align="center">Files (S3-compatible Object Storage) for Hasura</h4>
 
 This Repository is forked from [elitan/hasura-backend-plus](https://github.com/elitan/hasura-backend-plus) which also includes user management. As I only require file uploads I decided to create this fork.
